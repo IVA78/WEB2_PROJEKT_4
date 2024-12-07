@@ -1,0 +1,42 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demonstracija HTTP/2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Demonstracija HTTP/2 protokola</h1>
+
+    <p>
+      Ova stranica sadrži slike i JS datoteke koje pokazuju prednosti HTTP/2
+      protokola.
+    </p>
+
+    <!-- Prikazivanje slika -->
+    <div id="images">
+      <h2>Slike</h2>
+      <div id="gallery">
+        <!-- Dinamičko dodavanje slika -->
+        <script>
+          for (let i = 1; i <= 15; i++) {
+            const img = document.createElement("img");
+            img.src = `image${i}.png`;
+            img.alt = `Slika ${i}`;
+            img.className = "thumbnail";
+            document.getElementById("gallery").appendChild(img);
+          }
+        </script>
+      </div>
+    </div>
+
+    <!-- Učitavanje script datoteka -->
+    <script src="script1.js"></script>
+    <script src="script2.js"></script>
+    <script src="script3.js"></script>
+    <script src="script4.js"></script>
+    <script src="script5.js"></script>
+  </body>
+</html>
